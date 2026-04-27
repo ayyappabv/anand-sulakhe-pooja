@@ -262,17 +262,24 @@
 
     .gallery-placeholder {
       background: #fff;
-      border: 2px dashed rgba(201,168,76,0.5);
+      border: 2px solid rgba(201,168,76,0.5);
       border-radius: 12px;
-      height: 180px;
+      height: 200px;
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      color: var(--text-muted);
     }
 
+    .gallery-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .gallery-placeholder img:hover { transform: scale(1.05); }
     .gallery-placeholder span { font-size: 36px; }
     .gallery-placeholder p { font-size: 12px; text-align: center; padding: 0 12px; }
 
@@ -375,39 +382,39 @@
 
     <div class="testimonial-card">
       <div class="quote-mark">"</div>
-      <p class="testimonial-text">Panditji performed the Satyanarayan Pooja at our home in Mississauga. The entire ceremony was conducted with so much devotion and warmth. Our whole family felt truly blessed. Highly recommend!</p>
+      <p class="testimonial-text">Panditji performed the Satyanarayan Pooja at our home in 6th Line, Oakville. The entire ceremony was conducted with so much devotion and warmth. Our whole family felt truly blessed. Highly recommend!</p>
       <div class="testimonial-footer">
-        <div class="avatar">RS</div>
+        <div class="avatar">KD</div>
         <div>
           <div class="stars">★★★★★</div>
-          <div class="client-name">Rajesh S. <span style="font-size:11px; color:#aaa;">[Sample]</span></div>
-          <div class="client-detail">Satyanarayan Pooja &bull; Mississauga</div>
+          <div class="client-name">Kiran Parameshwar Dodamani & Shweta Kiran Dodamani</div>
+          <div class="client-detail">Satyanarayan Pooja &bull; 6th Line, Oakville</div>
         </div>
       </div>
     </div>
 
     <div class="testimonial-card">
       <div class="quote-mark">"</div>
-      <p class="testimonial-text">We had Vastu Shanti done before moving into our new home in Brampton. Pandit Anand Sulakhe explained every step beautifully in Marathi and English. The atmosphere was divine. Thank you Panditji!</p>
+      <p class="testimonial-text">We had Gruha Pravesh done before moving into our new home in Wheat Boom Dr, Oakville. Pandit Anand Sulakhe explained every step beautifully in Marathi and English. The atmosphere was divine. Thank you Panditji!</p>
       <div class="testimonial-footer">
-        <div class="avatar">PM</div>
+        <div class="avatar">AV</div>
         <div>
           <div class="stars">★★★★★</div>
-          <div class="client-name">Priya M. <span style="font-size:11px; color:#aaa;">[Sample]</span></div>
-          <div class="client-detail">Vastu Shanti &bull; Brampton</div>
+          <div class="client-name">Kavita & Ayyappa</div>
+          <div class="client-detail">Gruha Pravesh &bull; Wheat Boom Dr, Oakville</div>
         </div>
       </div>
     </div>
 
     <div class="testimonial-card">
       <div class="quote-mark">"</div>
-      <p class="testimonial-text">Panditji conducted our Gruha Pravesh pooja in Toronto. He is very knowledgeable, punctual and makes the whole experience very meaningful. Our home has felt peaceful ever since. God bless him!</p>
+      <p class="testimonial-text">Panditji conducted our Satyanarayan Pooja in Orangeville. He is very knowledgeable, punctual and makes the whole experience very meaningful. Our home has felt peaceful ever since. God bless him!</p>
       <div class="testimonial-footer">
-        <div class="avatar">AK</div>
+        <div class="avatar">RB</div>
         <div>
           <div class="stars">★★★★★</div>
-          <div class="client-name">Anil K. <span style="font-size:11px; color:#aaa;">[Sample]</span></div>
-          <div class="client-detail">Housewarming Pooja &bull; Toronto</div>
+          <div class="client-name">Ramesh Bhalerao</div>
+          <div class="client-detail">Satyanarayan Pooja &bull; Orangeville</div>
         </div>
       </div>
     </div>
@@ -460,28 +467,22 @@
   <p class="section-sub" style="margin-bottom:36px;">पूजा दर्शन &bull; Real photos will be added soon</p>
   <div class="gallery-grid">
     <div class="gallery-placeholder">
-      <span>🪔</span>
-      <p>Satyanarayan Pooja<br><em>Photo coming soon</em></p>
+      <img src="punditji_1.jpg" alt="Pandit Anand Sulakhe performing Aarti" />
     </div>
     <div class="gallery-placeholder">
-      <span>🔥</span>
-      <p>Havan / Sacred Fire<br><em>Photo coming soon</em></p>
+      <img src="punditji_2.jpg" alt="Pandit Anand Sulakhe at Sai Temple" />
     </div>
     <div class="gallery-placeholder">
-      <span>🏠</span>
-      <p>Gruha Pravesh<br><em>Photo coming soon</em></p>
+      <img src="punditji_3.jpg" alt="Pandit Anand Sulakhe reciting mantras" />
     </div>
     <div class="gallery-placeholder">
-      <span>🌸</span>
-      <p>Lakshmi Pooja Setup<br><em>Photo coming soon</em></p>
+      <img src="satyanarayana.jpg" alt="Satyanarayan Pooja" />
     </div>
     <div class="gallery-placeholder">
-      <span>🐘</span>
-      <p>Ganesh Pooja<br><em>Photo coming soon</em></p>
+      <img src="ganesh_pooja.jpg" alt="Ganesh Pooja" />
     </div>
     <div class="gallery-placeholder">
-      <span>📿</span>
-      <p>Mantra Recitation<br><em>Photo coming soon</em></p>
+      <img src="durga_lakshmi.jpg" alt="Durga Lakshmi Pooja" />
     </div>
   </div>
 </div>
