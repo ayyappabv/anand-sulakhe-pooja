@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anand Sulakhe Vedic Puja Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --saffron: #E07B00;
+      --saffron-light: #FFF3E0;
+      --saffron-dark: #B85C00;
+      --gold: #C9A84C;
+      --gold-light: #FDF6E3;
+      --maroon: #7B1E1E;
+      --cream: #FDFAF4;
+      --text-dark: #2C1A00;
+      --text-muted: #6B4E2A;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--maroon) 0%, #4A0E0E 100%);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 1;
+    }
+
+    .header-inner {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .om-symbol {
+      font-size: 52px;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+
+    .brand-tagline {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .lang-badge {
+      margin-top: 16px;
+      display: inline-block;
+      background: rgba(201,168,76,0.18);
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold);
+      font-size: 12px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--saffron);
+      text-align: center;
+      padding: 0;
+    }
+
+    nav a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover { background: var(--saffron-dark); }
+
+    /* ── HERO SECTION ── */
+    .hero {
+      background: var(--gold-light);
+      border-bottom: 3px solid var(--gold);
+      padding: 56px 24px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 4vw, 34px);
+      color: var(--maroon);
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+
+    /* ── PUNDIT CARD ── */
+    .pundit-section {
+      max-width: 960px;
+      margin: 56px auto;
+      padding: 0 24px;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .pundit-photo {
+      flex: 0 0 220px;
+      text-align: center;
+    }
+
+    .photo-placeholder {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--saffron-light), #ffe0b2);
+      border: 4px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+      color: var(--saffron);
+    }
+
+    .photo-placeholder span {
+      font-size: 64px;
+      display: block;
+    }
+
+    .photo-placeholder p {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .pundit-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--maroon);
+    }
+
+    .pundit-info {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .pundit-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: var(--maroon);
+      margin-bottom: 12px;
+    }
+
+    .pundit-info p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .area-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .area-badge {
+      background: var(--saffron-light);
+      border: 1px solid var(--saffron);
+      color: var(--saffron-dark);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      text-align: center;
+      position: relative;
+      margin: 8px 0 40px;
+    }
+
+    .divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0; right: 0;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.4;
+    }
+
+    .divider span {
+      position: relative;
+      background: var(--cream);
+      padding: 0 16px;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--saffron);
+    }
+
+    /* ── SERVICES ── */
+    .services-section {
+      background: var(--saffron-light);
+      padding: 56px 24px;
+      border-top: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .services-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: var(--maroon);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .services-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: #fff;
+      border: 1px solid rgba(201,168,76,0.35);
+      border-top: 3px solid var(--saffron);
+      border-radius: 10px;
+      padding: 24px 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(224,123,0,0.12);
+    }
+
+    .service-icon {
+      font-size: 32px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .service-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      color: var(--maroon);
+      margin-bottom: 6px;
+    }
+
+    .service-card p {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      max-width: 760px;
+      margin: 56px auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: var(--maroon);
+      margin-bottom: 8px;
+    }
+
+    .contact-section p.sub {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 36px;
+    }
+
+    .contact-box {
+      background: #fff;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 14px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--saffron-light);
+      border: 1px solid var(--saffron);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text {
+      text-align: left;
+    }
+
+    .contact-item-text .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .contact-item-text a,
+    .contact-item-text span {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--maroon);
+      text-decoration: none;
+    }
+
+    .contact-item-text a:hover { color: var(--saffron); }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 8px;
+      background: #25D366;
+      color: #fff !important;
+      font-size: 14px !important;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--maroon);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 13px;
+    }
+
+    footer span {
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .pundit-section { flex-direction: column; align-items: center; }
+      .pundit-info { text-align: center; }
+      .area-badges { justify-content: center; }
+      nav a { padding: 12px 16px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <span class="om-symbol">ॐ</span>
+    <div class="brand-name">Anand Sulakhe<br>Vedic Puja Services</div>
+    <div class="brand-tagline">आनंद सुलाखे वैदिक पूजा सेवा</div>
+    <div class="lang-badge">हिंदी &bull; मराठी &bull; English</div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="poojas.html">Our Poojas</a>
+  <a href="clients.html">Our Clients</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h2>Authentic Vedic Rituals — Performed with Devotion & Tradition</h2>
+  <p>Pandit Anand Sulakhe brings the sacred traditions of Vedic puja to your home across the Greater Toronto Area. From Satyanarayan Katha to Vastu Shanti, every ceremony is performed with full devotion, proper vidhi and heartfelt blessings.</p>
+</div>
+
+<!-- PUNDIT SECTION -->
+<div class="pundit-section">
+  <div class="pundit-photo">
+    <div class="photo-placeholder">
+      <span>🙏</span>
+      <p>Photo coming soon</p>
+    </div>
+    <div class="pundit-name">Pandit Anand Sulakhe</div>
+  </div>
+
+  <div class="pundit-info">
+    <h3>About Pandit Anand Sulakhe</h3>
+    <p>
+      Pandit Anand Sulakhe is an experienced and deeply devoted Vedic priest associated with the Sai Temple. With years of spiritual practice and deep knowledge of Hindu rituals, he brings authenticity and warmth to every puja he performs.
+    </p>
+    <p>
+      He is fluent in <strong>Hindi, Marathi and English</strong>, making every ceremony accessible and meaningful for families across the GTA.
+    </p>
+    <div class="divider"><span>🏡 Areas Served</span></div>
+    <div class="area-badges">
+      <span class="area-badge">Mississauga</span>
+      <span class="area-badge">Brampton</span>
+      <span class="area-badge">Toronto</span>
+      <span class="area-badge">Burlington</span>
+      <span class="area-badge">Niagara Region</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="services-section">
+  <h2>Our Sacred Services</h2>
+  <p class="services-subtitle">हमारी पूजा सेवाएं &bull; आमच्या पूजा सेवा</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🪔</span>
+      <h4>Satyanarayan Pooja</h4>
+      <p>सत्यनारायण पूजा<br>A sacred vow for prosperity, health and happiness</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏠</span>
+      <h4>Housewarming Pooja</h4>
+      <p>गृहप्रवेश पूजा<br>Bless your new home with divine energy and peace</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">☮️</span>
+      <h4>Gruha Shanti</h4>
+      <p>गृह शांती<br>Restore harmony and positive vibrations in your home</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🧿</span>
+      <h4>Vastu Shanti</h4>
+      <p>वास्तु शांती<br>Align your space with cosmic energies for well-being</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🐘</span>
+      <h4>Ganesh Pooja</h4>
+      <p>गणेश पूजा<br>Remove obstacles and invite auspicious beginnings</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🌸</span>
+      <h4>Durga / Lakshmi Pooja</h4>
+      <p>दुर्गा / लक्ष्मी पूजा<br>Invoke divine blessings of strength and abundance</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">✨</span>
+      <h4>All Shanti Poojas</h4>
+      <p>सर्व शांती पूजा<br>Customized shanti rituals for any occasion or need</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact-section">
+  <h2>Book a Pooja</h2>
+  <p class="sub">संपर्क करा &bull; संपर्क करें &bull; Get in Touch</p>
+
+  <div class="contact-box">
+    <div class="contact-item">
+      <div class="contact-icon">📞</div>
+      <div class="contact-item-text">
+        <div class="label">Call / WhatsApp</div>
+        <a href="tel:+14377719930">+1 437 771 9930</a>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div class="contact-item-text">
+        <div class="label">Service Areas</div>
+        <span>Mississauga, Brampton, Toronto,<br>Burlington & Niagara Region</span>
+      </div>
+    </div>
+
+    <a class="whatsapp-btn" href="https://wa.me/14377719930" target="_blank">
+      💬 Chat on WhatsApp
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>ॐ</span><br><br>
+  &copy; 2025 Anand Sulakhe Vedic Puja Services &mdash; Serving the GTA with devotion<br>
+  <span style="color:rgba(255,255,255,0.5); font-size:12px; margin-top:6px; display:block;">
+    हरि ॐ तत्सत् &bull; ॐ नमः शिवाय &bull; जय साई राम
+  </span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Poojas – Anand Sulakhe Vedic Puja Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --saffron: #E07B00;
+      --saffron-light: #FFF3E0;
+      --saffron-dark: #B85C00;
+      --gold: #C9A84C;
+      --gold-light: #FDF6E3;
+      --maroon: #7B1E1E;
+      --cream: #FDFAF4;
+      --text-dark: #2C1A00;
+      --text-muted: #6B4E2A;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--maroon) 0%, #4A0E0E 100%);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .header-inner {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+
+    .om-symbol {
+      font-size: 44px;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 4vw, 38px);
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .brand-tagline {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      background: var(--saffron);
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover { background: var(--saffron-dark); }
+
+    .page-hero {
+      background: var(--gold-light);
+      border-bottom: 3px solid var(--gold);
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 4vw, 36px);
+      color: var(--maroon);
+      margin-bottom: 10px;
+    }
+
+    .page-hero p {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 580px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ── POOJA CARDS ── */
+    .poojas-wrap {
+      max-width: 960px;
+      margin: 56px auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .pooja-card {
+      background: #fff;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-left: 5px solid var(--saffron);
+      border-radius: 12px;
+      padding: 32px 32px 28px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+
+    .pooja-icon {
+      font-size: 44px;
+      flex-shrink: 0;
+      width: 64px;
+      text-align: center;
+    }
+
+    .pooja-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--maroon);
+      margin-bottom: 4px;
+    }
+
+    .pooja-subtitle {
+      font-size: 13px;
+      color: var(--saffron-dark);
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .pooja-body p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .pooja-body p:last-child { margin-bottom: 0; }
+
+    .significance-tag {
+      display: inline-block;
+      background: var(--saffron-light);
+      border: 1px solid var(--saffron);
+      color: var(--saffron-dark);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-right: 6px;
+      margin-bottom: 12px;
+    }
+
+    /* ── CTA ── */
+    .cta-strip {
+      background: var(--maroon);
+      padding: 48px 24px;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .cta-strip h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .cta-strip p {
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--saffron);
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 36px;
+      border-radius: 30px;
+      letter-spacing: 0.5px;
+      margin: 6px;
+      transition: background 0.2s;
+    }
+
+    .cta-btn:hover { background: var(--saffron-dark); }
+
+    .cta-btn.whatsapp {
+      background: #25D366;
+    }
+
+    .cta-btn.whatsapp:hover { background: #1da855; }
+
+    footer {
+      background: #2C0A0A;
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+    }
+
+    footer span { color: var(--gold); }
+
+    @media (max-width: 580px) {
+      .pooja-card { flex-direction: column; gap: 12px; }
+      .pooja-icon { width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <span class="om-symbol">ॐ</span>
+    <div class="brand-name">Anand Sulakhe Vedic Puja Services</div>
+    <div class="brand-tagline">आनंद सुलाखे वैदिक पूजा सेवा</div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="poojas.html">Our Poojas</a>
+  <a href="clients.html">Our Clients</a>
+</nav>
+
+<div class="page-hero">
+  <h1>Our Sacred Poojas</h1>
+  <p>Each ritual is a divine conversation between you and the universe. Performed with authentic Vedic mantras, proper vidhi and heartfelt devotion by Pandit Anand Sulakhe.</p>
+</div>
+
+<div class="poojas-wrap">
+
+  <!-- SATYANARAYAN -->
+  <div class="pooja-card">
+    <div class="pooja-icon">🪔</div>
+    <div class="pooja-body">
+      <h2>Satyanarayan Pooja</h2>
+      <div class="pooja-subtitle">सत्यनारायण पूजा &bull; सत्यनारायण पूजा</div>
+      <span class="significance-tag">Prosperity</span>
+      <span class="significance-tag">Health</span>
+      <span class="significance-tag">Family Wellbeing</span>
+      <p>The Satyanarayan Pooja is one of the most beloved and widely performed Hindu rituals, dedicated to Lord Vishnu in his form as Satyanarayan — the Lord of Truth. Families perform this pooja to express gratitude for blessings received and to invite prosperity, good health and happiness into their homes.</p>
+      <p>It is traditionally performed on auspicious occasions such as housewarming, marriage anniversaries, births, business openings, or simply on a full moon day (Purnima). The katha (sacred story) narrated during the pooja teaches the virtues of devotion, honesty and surrender to the divine.</p>
+    </div>
+  </div>
+
+  <!-- VASTU SHANTI -->
+  <div class="pooja-card">
+    <div class="pooja-icon">🧿</div>
+    <div class="pooja-body">
+      <h2>Vastu Shanti Pooja</h2>
+      <div class="pooja-subtitle">वास्तु शांती पूजा &bull; वास्तु शान्ति पूजा</div>
+      <span class="significance-tag">Harmony</span>
+      <span class="significance-tag">Positive Energy</span>
+      <span class="significance-tag">Peace</span>
+      <p>Vastu Shanti is a sacred ritual performed to purify a home or workspace and align it with the natural and cosmic forces of the universe. According to Vastu Shastra — the ancient Indian science of architecture — every space holds energy. When that energy is imbalanced, families may experience unrest, financial difficulties or health problems.</p>
+      <p>The Vastu Shanti pooja cleanses these negative energies through Vedic mantras, homam (fire ritual) and worship of the Vastu Purusha — the deity of the space. It brings peace, harmony and positive vibrations to the home, ensuring the well-being of all who live there.</p>
+    </div>
+  </div>
+
+  <!-- HOUSEWARMING / GRUHA PRAVESH -->
+  <div class="pooja-card">
+    <div class="pooja-icon">🏠</div>
+    <div class="pooja-body">
+      <h2>Housewarming / Gruha Pravesh Pooja</h2>
+      <div class="pooja-subtitle">गृहप्रवेश पूजा &bull; गृहप्रवेश पूजा</div>
+      <span class="significance-tag">New Beginnings</span>
+      <span class="significance-tag">Divine Blessings</span>
+      <p>Moving into a new home is one of life's most significant milestones. The Gruha Pravesh pooja is performed before entering a newly built or purchased home for the first time, to invite divine blessings and ensure the space is spiritually cleansed and consecrated.</p>
+      <p>The ritual involves lighting a sacred fire (havan), performing Ganesh pooja, Lakshmi pooja and Vastu puja, followed by the family entering the home with a lit lamp and boiling of milk — all auspicious signs of abundance and new beginnings.</p>
+    </div>
+  </div>
+
+  <!-- GRUHA SHANTI -->
+  <div class="pooja-card">
+    <div class="pooja-icon">☮️</div>
+    <div class="pooja-body">
+      <h2>Gruha Shanti Pooja</h2>
+      <div class="pooja-subtitle">गृह शांती पूजा &bull; गृह शान्ति पूजा</div>
+      <span class="significance-tag">Restoration</span>
+      <span class="significance-tag">Calm & Balance</span>
+      <p>Gruha Shanti is performed when a household is experiencing prolonged disturbance, conflicts, ill health, financial struggles or negative energy. It is a deeply purifying ritual that restores peace and positive harmony within the family and the home environment.</p>
+      <p>The ceremony involves recitation of specific shanti mantras, havan, and prayers to Navagrahas (nine planets) to neutralize any adverse planetary influences that may be affecting the household.</p>
+    </div>
+  </div>
+
+  <!-- GANESH POOJA -->
+  <div class="pooja-card">
+    <div class="pooja-icon">🐘</div>
+    <div class="pooja-body">
+      <h2>Ganesh Pooja</h2>
+      <div class="pooja-subtitle">गणेश पूजा &bull; गणेश पूजा</div>
+      <span class="significance-tag">Remove Obstacles</span>
+      <span class="significance-tag">Auspicious Start</span>
+      <p>Lord Ganesha is worshipped at the beginning of every important undertaking — be it a new home, a business venture, a wedding or any celebration. He is the remover of obstacles (Vighnaharta) and the deity of wisdom and new beginnings.</p>
+      <p>Ganesh Pooja is performed to seek his blessings before any major event, ensuring that the path ahead is clear, auspicious and free of hurdles. It is a joyful and energizing ritual loved by families of all ages.</p>
+    </div>
+  </div>
+
+  <!-- DURGA / LAKSHMI -->
+  <div class="pooja-card">
+    <div class="pooja-icon">🌸</div>
+    <div class="pooja-body">
+      <h2>Durga / Lakshmi Pooja</h2>
+      <div class="pooja-subtitle">दुर्गा / लक्ष्मी पूजा &bull; दुर्गा / लक्ष्मी पूजा</div>
+      <span class="significance-tag">Strength</span>
+      <span class="significance-tag">Abundance</span>
+      <span class="significance-tag">Protection</span>
+      <p>Goddess Durga is the divine embodiment of shakti (power) and protection, worshipped especially during Navratri and times when families seek her strength and courage. Goddess Lakshmi is the deity of wealth, fortune and auspiciousness, invoked for prosperity and abundance in all aspects of life.</p>
+      <p>These poojas can be performed on special occasions, festivals, or any time a family wishes to invoke the divine feminine energy for blessings of strength, protection and lasting prosperity.</p>
+    </div>
+  </div>
+
+  <!-- ALL SHANTI POOJAS -->
+  <div class="pooja-card">
+    <div class="pooja-icon">✨</div>
+    <div class="pooja-body">
+      <h2>All Kinds of Shanti Poojas</h2>
+      <div class="pooja-subtitle">सर्व शांती पूजा &bull; सर्व शान्ति पूजा</div>
+      <span class="significance-tag">Customized</span>
+      <span class="significance-tag">Any Occasion</span>
+      <p>Pandit Anand Sulakhe performs a wide range of shanti poojas tailored to your specific needs — including Navagraha Shanti, Kalsarpa Shanti, Mangal Shanti, Pitru Paksha rituals and more. If you have a specific need or concern, simply reach out and Panditji will guide you on the most appropriate ritual.</p>
+      <p>Every pooja is conducted in accordance with traditional Vedic procedures in Hindi, Marathi or English as per your preference.</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <h3>Ready to Book a Pooja?</h3>
+  <p>Contact Pandit Anand Sulakhe today — serving Mississauga, Brampton, Toronto, Burlington & Niagara</p>
+  <a class="cta-btn" href="tel:+14377719930">📞 Call Now: +1 437 771 9930</a>
+  <a class="cta-btn whatsapp" href="https://wa.me/14377719930" target="_blank">💬 WhatsApp</a>
+</div>
+
+<footer>
+  <span>ॐ</span><br><br>
+  &copy; 2025 Anand Sulakhe Vedic Puja Services &mdash; Serving the GTA with devotion<br>
+  <span style="color:rgba(255,255,255,0.45); font-size:12px; margin-top:6px; display:block;">जय साई राम &bull; ॐ नमः शिवाय</span>
+</footer>
+
+</body>
+</html>

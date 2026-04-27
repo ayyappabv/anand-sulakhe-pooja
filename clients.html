@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Clients – Anand Sulakhe Vedic Puja Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --saffron: #E07B00;
+      --saffron-light: #FFF3E0;
+      --saffron-dark: #B85C00;
+      --gold: #C9A84C;
+      --gold-light: #FDF6E3;
+      --maroon: #7B1E1E;
+      --cream: #FDFAF4;
+      --text-dark: #2C1A00;
+      --text-muted: #6B4E2A;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--maroon) 0%, #4A0E0E 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .header-inner {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+
+    .om-symbol { font-size: 44px; color: var(--gold); display: block; margin-bottom: 10px; }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 4vw, 38px);
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .brand-tagline {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav { background: var(--saffron); text-align: center; }
+
+    nav a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover { background: var(--saffron-dark); }
+
+    .page-hero {
+      background: var(--gold-light);
+      border-bottom: 3px solid var(--gold);
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 4vw, 36px);
+      color: var(--maroon);
+      margin-bottom: 10px;
+    }
+
+    .page-hero p {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ── DUMMY NOTICE BANNER ── */
+    .dummy-notice {
+      background: #FFF8E1;
+      border: 1px dashed var(--gold);
+      border-radius: 10px;
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--saffron-dark);
+      max-width: 700px;
+      margin: 36px auto 0;
+    }
+
+    /* ── STATS STRIP ── */
+    .stats-strip {
+      background: var(--maroon);
+      padding: 36px 24px;
+      margin-top: 48px;
+    }
+
+    .stats-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 24px;
+      text-align: center;
+    }
+
+    .stat-item .number {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .stat-item .label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--maroon);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+    }
+
+    .testimonials-wrap {
+      max-width: 960px;
+      margin: 56px auto;
+      padding: 0 24px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: #fff;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 14px;
+      padding: 28px 24px;
+      position: relative;
+    }
+
+    .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      color: var(--saffron-light);
+      line-height: 1;
+      position: absolute;
+      top: 12px;
+      left: 20px;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text-muted);
+      margin-top: 28px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-footer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      padding-top: 16px;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--saffron-light);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      color: var(--saffron);
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .client-name {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--maroon);
+    }
+
+    .client-detail {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    /* ── GALLERY ── */
+    .gallery-section {
+      background: var(--saffron-light);
+      border-top: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      padding: 56px 24px;
+    }
+
+    .gallery-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-placeholder {
+      background: #fff;
+      border: 2px dashed rgba(201,168,76,0.5);
+      border-radius: 12px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--text-muted);
+    }
+
+    .gallery-placeholder span { font-size: 36px; }
+    .gallery-placeholder p { font-size: 12px; text-align: center; padding: 0 12px; }
+
+    /* ── CTA ── */
+    .cta-strip {
+      background: var(--maroon);
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .cta-strip h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .cta-strip p { color: rgba(255,255,255,0.7); font-size: 15px; margin-bottom: 24px; }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--saffron);
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 36px;
+      border-radius: 30px;
+      margin: 6px;
+      transition: background 0.2s;
+    }
+
+    .cta-btn:hover { background: var(--saffron-dark); }
+    .cta-btn.whatsapp { background: #25D366; }
+    .cta-btn.whatsapp:hover { background: #1da855; }
+
+    footer {
+      background: #2C0A0A;
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+    }
+
+    footer span { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <span class="om-symbol">ॐ</span>
+    <div class="brand-name">Anand Sulakhe Vedic Puja Services</div>
+    <div class="brand-tagline">आनंद सुलाखे वैदिक पूजा सेवा</div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="poojas.html">Our Poojas</a>
+  <a href="clients.html">Our Clients</a>
+</nav>
+
+<div class="page-hero">
+  <h1>Our Happy Clients</h1>
+  <p>Families across the Greater Toronto Area have trusted Pandit Anand Sulakhe to conduct their most sacred ceremonies. Here is what they have to say.</p>
+  <div class="dummy-notice">
+    ⚠️ This is a sample/placeholder page. Real client photos, names and testimonials will be added once Punditji provides the details.
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="number">150+</div>
+      <div class="label">Poojas Performed</div>
+    </div>
+    <div class="stat-item">
+      <div class="number">8+</div>
+      <div class="label">Years of Service</div>
+    </div>
+    <div class="stat-item">
+      <div class="number">5</div>
+      <div class="label">Cities Served</div>
+    </div>
+    <div class="stat-item">
+      <div class="number">100%</div>
+      <div class="label">Satisfied Families</div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials-wrap">
+  <h2 class="section-title">What Families Say</h2>
+  <p class="section-sub">आमच्या ग्राहकांचे अनुभव &bull; हमारे ग्राहकों के अनुभव</p>
+
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">Panditji performed the Satyanarayan Pooja at our home in Mississauga. The entire ceremony was conducted with so much devotion and warmth. Our whole family felt truly blessed. Highly recommend!</p>
+      <div class="testimonial-footer">
+        <div class="avatar">RS</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="client-name">Rajesh S. <span style="font-size:11px; color:#aaa;">[Sample]</span></div>
+          <div class="client-detail">Satyanarayan Pooja &bull; Mississauga</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">We had Vastu Shanti done before moving into our new home in Brampton. Pandit Anand Sulakhe explained every step beautifully in Marathi and English. The atmosphere was divine. Thank you Panditji!</p>
+      <div class="testimonial-footer">
+        <div class="avatar">PM</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="client-name">Priya M. <span style="font-size:11px; color:#aaa;">[Sample]</span></div>
+          <div class="client-detail">Vastu Shanti &bull; Brampton</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">Panditji conducted our Gruha Pravesh pooja in Toronto. He is very knowledgeable, punctual and makes the whole experience very meaningful. Our home has felt peaceful ever since. God bless him!</p>
+      <div class="testimonial-footer">
+        <div class="avatar">AK</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="client-name">Anil K. <span style="font-size:11px; color:#aaa;">[Sample]</span></div>
+          <div class="client-detail">Housewarming Pooja &bull; Toronto</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">We called Panditji for Lakshmi Pooja before Diwali. He came all the way to Burlington and performed the pooja with such sincerity. The mantras, the vidhi — everything was perfect. Will call again!</p>
+      <div class="testimonial-footer">
+        <div class="avatar">SN</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="client-name">Sunita N. <span style="font-size:11px; color:#aaa;">[Sample]</span></div>
+          <div class="client-detail">Lakshmi Pooja &bull; Burlington</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">Pandit Anand Sulakhe performed Ganesh Pooja for our new business opening in Mississauga. He brought positive energy and confidence to our team. Business has been going great since then!</p>
+      <div class="testimonial-footer">
+        <div class="avatar">VD</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="client-name">Vikram D. <span style="font-size:11px; color:#aaa;">[Sample]</span></div>
+          <div class="client-detail">Ganesh Pooja &bull; Mississauga</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="quote-mark">"</div>
+      <p class="testimonial-text">We had Gruha Shanti performed for our home in Niagara. Panditji travelled without hesitation and made the ceremony very special. His knowledge of Sanskrit shlokas is impressive. Truly a blessed experience.</p>
+      <div class="testimonial-footer">
+        <div class="avatar">MJ</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="client-name">Meera J. <span style="font-size:11px; color:#aaa;">[Sample]</span></div>
+          <div class="client-detail">Gruha Shanti &bull; Niagara</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery-section">
+  <h2 class="section-title">Pooja Gallery</h2>
+  <p class="section-sub" style="margin-bottom:36px;">पूजा दर्शन &bull; Real photos will be added soon</p>
+  <div class="gallery-grid">
+    <div class="gallery-placeholder">
+      <span>🪔</span>
+      <p>Satyanarayan Pooja<br><em>Photo coming soon</em></p>
+    </div>
+    <div class="gallery-placeholder">
+      <span>🔥</span>
+      <p>Havan / Sacred Fire<br><em>Photo coming soon</em></p>
+    </div>
+    <div class="gallery-placeholder">
+      <span>🏠</span>
+      <p>Gruha Pravesh<br><em>Photo coming soon</em></p>
+    </div>
+    <div class="gallery-placeholder">
+      <span>🌸</span>
+      <p>Lakshmi Pooja Setup<br><em>Photo coming soon</em></p>
+    </div>
+    <div class="gallery-placeholder">
+      <span>🐘</span>
+      <p>Ganesh Pooja<br><em>Photo coming soon</em></p>
+    </div>
+    <div class="gallery-placeholder">
+      <span>📿</span>
+      <p>Mantra Recitation<br><em>Photo coming soon</em></p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <h3>Join Our Happy Families</h3>
+  <p>Book Pandit Anand Sulakhe for your next sacred ceremony</p>
+  <a class="cta-btn" href="tel:+14377719930">📞 Call: +1 437 771 9930</a>
+  <a class="cta-btn whatsapp" href="https://wa.me/14377719930" target="_blank">💬 WhatsApp</a>
+</div>
+
+<footer>
+  <span>ॐ</span><br><br>
+  &copy; 2025 Anand Sulakhe Vedic Puja Services &mdash; Serving the GTA with devotion<br>
+  <span style="color:rgba(255,255,255,0.45); font-size:12px; margin-top:6px; display:block;">जय साई राम &bull; ॐ नमः शिवाय</span>
+</footer>
+
+</body>
+</html>
