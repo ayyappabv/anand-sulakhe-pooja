@@ -123,6 +123,13 @@
     }
 
     .pooja-card {
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+    }
+
+    a.pooja-card {
       background: #fff;
       border: 1px solid rgba(201,168,76,0.3);
       border-left: 5px solid var(--saffron);
@@ -239,7 +246,14 @@
     footer span { color: var(--gold); }
 
     @media (max-width: 580px) {
-      .pooja-card { flex-direction: column; gap: 12px; }
+      .pooja-card {
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+    }
+
+    a.pooja-card { flex-direction: column; gap: 12px; }
       .pooja-icon { width: auto; }
     }
   </style>
@@ -260,6 +274,36 @@
   <a href="clients.html">Our Clients</a>
 </nav>
 
+<!-- DEITY STRIP -->
+<div style="background: var(--gold-light); border-bottom: 2px solid var(--gold); padding: 20px 16px;">
+  <div style="max-width: 960px; margin: 0 auto; display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: nowrap;">
+    <a href="index.html" style="text-decoration:none;"><div style="text-align: center; flex: 1; min-width: 0;">
+      <img src="ganesha.png" alt="Lord Ganesha" style="height: 130px; width: auto; max-width: 100%; border-radius: 10px; border: 3px solid var(--gold); box-shadow: 0 4px 16px rgba(201,168,76,0.25);" />
+      <div style="margin-top: 8px; font-family: 'Playfair Display', serif; font-size: 13px; color: var(--maroon); font-weight: 600;">ॐ गणेशाय नमः</div>
+      <div style="font-size: 11px; color: var(--text-muted);">Om Ganeshaya Namaha</div>
+    </div></a>
+    <div style="text-align: center; flex-shrink: 0; font-family: 'Playfair Display', serif; font-size: 36px; color: #CC0000; font-weight: 900; margin-bottom: 32px; -webkit-text-stroke: 1.5px #CC0000;">卐</div>
+    <a href="index.html" style="text-decoration:none;"><div style="text-align: center; flex: 1; min-width: 0;">
+      <img src="saibaba.jpg" alt="Shri Sai Baba" style="height: 130px; width: auto; max-width: 100%; border-radius: 10px; border: 3px solid var(--gold); box-shadow: 0 4px 16px rgba(201,168,76,0.25);" />
+      <div style="margin-top: 8px; font-family: 'Playfair Display', serif; font-size: 13px; color: var(--maroon); font-weight: 600;">ॐ श्री साईं राम</div>
+      <div style="font-size: 11px; color: var(--text-muted);">Om Shri Sai Ram</div>
+    </div></a>
+  </div>
+</div>
+
+
+      <div style="font-size: 11px; color: var(--text-muted);">Om Ganeshaya Namaha</div>
+    </div></a>
+    <div style="text-align: center; flex-shrink: 0; font-family: 'Playfair Display', serif; font-size: 36px; color: #CC0000; font-weight: 900; margin-bottom: 32px; -webkit-text-stroke: 1.5px #CC0000;">卐</div>
+    <a href="index.html" style="text-decoration:none;"><a href="index.html" style="text-decoration:none;"><div style="text-align: center; flex: 1; min-width: 0;">
+      <img src="saibaba.jpg" alt="Shri Sai Baba" style="height: 130px; width: auto; max-width: 100%; border-radius: 10px; border: 3px solid var(--gold); box-shadow: 0 4px 16px rgba(201,168,76,0.25);" />
+      <div style="margin-top: 8px; font-family: 'Playfair Display', serif; font-size: 13px; color: var(--maroon); font-weight: 600;">ॐ श्री साईं राम</div>
+      <div style="font-size: 11px; color: var(--text-muted);">Om Shri Sai Ram</div>
+    </div></a>
+  </div>
+</div>
+
+
 <div class="page-hero">
   <h1>Our Sacred Poojas</h1>
   <p>Each ritual is a divine conversation between you and the universe. Performed with authentic Vedic mantras, proper vidhi and heartfelt devotion by Pandit Anand Sulakhe.</p>
@@ -269,7 +313,7 @@
 
   <!-- SATYANARAYAN -->
   <div id="satyanarayan"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="satyanarayana.jpg" alt="Lord Satyanarayan" /></div>
     <div class="pooja-body">
       <h2>Satyanarayan Pooja</h2>
@@ -280,11 +324,11 @@
       <p>The Satyanarayan Pooja is one of the most beloved and widely performed Hindu rituals, dedicated to Lord Vishnu in his form as Satyanarayan — the Lord of Truth. Families perform this pooja to express gratitude for blessings received and to invite prosperity, good health and happiness into their homes.</p>
       <p>It is traditionally performed on auspicious occasions such as housewarming, marriage anniversaries, births, business openings, or simply on a full moon day (Purnima). The katha (sacred story) narrated during the pooja teaches the virtues of devotion, honesty and surrender to the divine.</p>
     </div>
-  </div>
+  </a>
 
   <!-- VASTU SHANTI -->
   <div id="vastu"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="vastu_shanti.jpg" alt="Vastu Shanti" /></div>
     <div class="pooja-body">
       <h2>Vastu Shanti Pooja</h2>
@@ -295,11 +339,11 @@
       <p>Vastu Shanti is a sacred ritual performed to purify a home or workspace and align it with the natural and cosmic forces of the universe. According to Vastu Shastra — the ancient Indian science of architecture — every space holds energy. When that energy is imbalanced, families may experience unrest, financial difficulties or health problems.</p>
       <p>The Vastu Shanti pooja cleanses these negative energies through Vedic mantras, homam (fire ritual) and worship of the Vastu Purusha — the deity of the space. It brings peace, harmony and positive vibrations to the home, ensuring the well-being of all who live there.</p>
     </div>
-  </div>
+  </a>
 
   <!-- GRUHA PRAVESH & GRUHA SHANTI -->
   <div id="gruhapravesh"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="gruha_pravesh.jpg" alt="Gruha Pravesh & Gruha Shanti" /></div>
     <div class="pooja-body">
       <h2>Gruha Pravesh & Gruha Shanti Pooja</h2>
@@ -311,11 +355,11 @@
       <p><strong>Gruha Pravesh</strong> is performed before entering a newly built or purchased home for the first time, to invite divine blessings and ensure the space is spiritually cleansed and consecrated. The ritual involves lighting a sacred fire (havan), Ganesh pooja, Lakshmi pooja and Vastu puja — all auspicious signs of abundance and new beginnings.</p>
       <p><strong>Gruha Shanti</strong> is performed when a household is experiencing prolonged disturbance, conflicts, ill health or negative energy. It is a deeply purifying ritual involving specific shanti mantras and havan that restores peace, positive harmony and balance within the family and the home.</p>
     </div>
-  </div>
+  </a>
 
   <!-- GANESH POOJA -->
   <div id="ganesh"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="ganesh_pooja.jpg" alt="Ganesh Pooja" /></div>
     <div class="pooja-body">
       <h2>Ganesh Pooja</h2>
@@ -325,11 +369,11 @@
       <p>Lord Ganesha is worshipped at the beginning of every important undertaking — be it a new home, a business venture, a wedding or any celebration. He is the remover of obstacles (Vighnaharta) and the deity of wisdom and new beginnings.</p>
       <p>Ganesh Pooja is performed to seek his blessings before any major event, ensuring that the path ahead is clear, auspicious and free of hurdles. It is a joyful and energizing ritual loved by families of all ages.</p>
     </div>
-  </div>
+  </a>
 
   <!-- DURGA / LAKSHMI -->
   <div id="durga"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="durga_lakshmi.jpg" alt="Durga Lakshmi Pooja" /></div>
     <div class="pooja-body">
       <h2>Durga / Lakshmi Pooja</h2>
@@ -340,11 +384,11 @@
       <p>Goddess Durga is the divine embodiment of shakti (power) and protection, worshipped especially during Navratri and times when families seek her strength and courage. Goddess Lakshmi is the deity of wealth, fortune and auspiciousness, invoked for prosperity and abundance in all aspects of life.</p>
       <p>These poojas can be performed on special occasions, festivals, or any time a family wishes to invoke the divine feminine energy for blessings of strength, protection and lasting prosperity.</p>
     </div>
-  </div>
+  </a>
 
   <!-- VAHAN POOJA -->
   <div id="vahan"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="vaahan_pooja.jpg" alt="Vahan Pooja" /></div>
     <div class="pooja-body">
       <h2>Vahan Pooja</h2>
@@ -355,11 +399,11 @@
       <p>Vahan Pooja is a sacred ritual performed to seek divine blessings for a new or existing vehicle. Whether it is a car, truck or any other vehicle, this pooja invokes the protection of Lord Ganesha and other deities to ensure safe, smooth and auspicious journeys for the owner and their family.</p>
       <p>Many devotees at the Shri Sai DwarkaMai Dham Temple approach Pandit Anand Sulakhe specifically for Vahan Pooja — a testament to the trust and faith families place in his blessings and expertise.</p>
     </div>
-  </div>
+  </a>
 
   <!-- NAVAGRAHA SHANTI -->
   <div id="navagraha"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="navagraha_pooja.jpg" alt="Navagraha Shanti" /></div>
     <div class="pooja-body">
       <h2>Navagraha Shanti Pooja</h2>
@@ -370,11 +414,11 @@
       <p>The Navagraha Shanti Pooja is performed to pacify the nine celestial planets (Navagrahas) and neutralize any adverse planetary influences affecting a person's life, health, career or relationships. Each of the nine planets — Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, Rahu and Ketu — is worshipped with specific mantras, offerings and rituals.</p>
       <p>This pooja brings balance, peace and positive energy by aligning the devotee with favourable planetary forces, helping them overcome obstacles and invite prosperity into their lives.</p>
     </div>
-  </div>
+  </a>
 
   <!-- JAP ANUSHTAN -->
   <div id="jap"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="jap_anushtan_pooja.jpg" alt="Jap Anushtan" /></div>
     <div class="pooja-body">
       <h2>Jap Anushtan Pooja</h2>
@@ -385,11 +429,11 @@
       <p>Jap Anushtan is a sacred and disciplined spiritual practice involving the repetitive recitation of specific Vedic mantras or divine names over an extended period. It is one of the most powerful forms of worship, performed to seek divine grace, fulfill a specific wish or resolve a deep-rooted problem in life.</p>
       <p>Pandit Anand Sulakhe performs Jap Anushtan with complete devotion and proper vidhi, ensuring the maximum spiritual benefit for the devotee and their family.</p>
     </div>
-  </div>
+  </a>
 
   <!-- ABHISHEK -->
   <div id="abhishek"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="abhishek_pooja.jpg" alt="Abhishek Pooja" /></div>
     <div class="pooja-body">
       <h2>Abhishek Pooja</h2>
@@ -400,11 +444,11 @@
       <p>Abhishek is a sacred bathing ritual performed on a deity idol using holy substances such as milk, honey, ghee, curd, water, rose water and more. It is one of the most auspicious and purifying forms of worship in Hindu tradition, believed to bring divine blessings, healing and spiritual cleansing.</p>
       <p>Whether performed on Lord Shiva, Lord Ganesha, Sai Baba or any other deity, Abhishek is a deeply meditative and powerful ritual that connects the devotee with the divine in a very personal and profound way.</p>
     </div>
-  </div>
+  </a>
 
   <!-- ALL GOD GODDESS -->
   <div id="general"></div>
-  <div class="pooja-card">
+  <a href="index.html#services" class="pooja-card">
     <div class="pooja-icon"><img src="general_pooja.jpg" alt="All God Goddess Pooja" /></div>
     <div class="pooja-body">
       <h2>All God & Goddess Poojas and Many More</h2>
